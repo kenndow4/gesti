@@ -1,0 +1,21 @@
+
+
+.error404{
+    
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.error404 h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+
+}
+.error404 p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #fff;
+}

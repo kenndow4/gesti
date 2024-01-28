@@ -1,0 +1,28 @@
+.cont-all {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 85%; }
+    .cont-all .cont-menu {
+      border-right: solid 1px #2e2d30;
+      background: #1f1e1f;
+      padding: 10px 0;
+      overflow: auto;
+      &::-webkit-scrollbar{
+        width: 4px;
+      };
+      &::-webkit-scrollbar-thumb{
+        background: #50525f;
+        border-radius: 20px;
+        opacity: 0.10;
+        transition: opacity 0.2s ease-in-out;
+      }
+     }
+     .cont-all .cont-contenido {
+    
+      /* background: #1f1f1f; */
+      background: #141414;
+    }
+    
+   
+    

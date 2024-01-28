@@ -1,0 +1,117 @@
+body{
+  background: #0d1117;
+}
+.cont-login {
+  /* background: #2b2b2b; */
+  width: 25%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 10px; }
+  .cont-login .perf {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%; }
+  .cont-login h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0; }
+  .cont-login input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    border: solid 1px #646464;
+    background: #3f3f3f;
+    color: #fff;
+    outline: none;
+    margin: 10px 0px;
+    font-size: 15px;
+    font-family: 'AR One Sans', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04);
+    font-weight: 400;
+    &::placeholder{
+      color: #9b9a9a;
+    }
+  }
+ 
+  .cont-login .input-error {
+    border: 1px solid red;
+    
+  }
+  
+
+  .cont-login .error {
+    color: red;
+    font-weight: 500;
+    text-align: center; }
+  .cont-login .submit {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    /* height: 40px; */
+    border-radius: 5px;
+    padding: 12px;
+    background: #006AFF;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'AR One Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover{
+      background: #0257cf;
+    }
+   }
+  .cont-login .o {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 20px; }
+
+.cont-google {
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+   }
+  .cont-google .login-google {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500px;
+    color: #414141;
+    justify-content: center;
+    cursor: pointer; }
+    .cont-google .login-google img {
+      width: 20px;
+      margin-right: 5px; }
+
+.cuenta {
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  margin: 20px 0;
+  font-weight: 500; }
+  .cuenta a {
+    color: #006AFF; }
+
+.politica {
+  text-align: center;
+  width: 30%;
+  font-size: 12px;
+  margin: auto;
+  color: #969696;
+  font-weight: 400; }
+
+
+/*# sourceMappingURL=login.css.map */

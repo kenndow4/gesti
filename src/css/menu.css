@@ -1,0 +1,202 @@
+*{
+  color: #ccc;
+}
+.gestix{
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 0px 20px 10px;
+}
+
+.cont-user {
+  
+  background: #1f1e1f;
+  border-top: solid 1px #2e2d30;
+  border-right: solid 1px #2e2d30;
+  width: 15%;
+  position: fixed;
+ 
+  bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px; }
+    .cont-user img {
+      width: 30px;
+      width: 30px;
+      border: solid 1px #3d3d3d;
+      border-radius: 100%; }
+    .cont-user .name-user {
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 5px;
+      }
+
+      .cont-opcion{
+        padding: 0px 5px;
+      }
+  
+  .inicio {
+    display: flex;
+    align-items: center;
+     }
+    .inicio a {
+      text-decoration: none;
+      
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-block;
+      width: 100%;
+      padding: 10px 15px; 
+      
+    border-bottom: solid 1px #2e2d30;
+    }
+  
+  .log button {
+    background: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+   
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px; }
+    .log button:hover {
+      color: #ececec; }
+  .log .cont-log {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 4px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 1; }
+    .log .cont-log button {
+      color: #444444;
+      display: block;
+      cursor: pointer;
+      margin: 10px 0;
+      display: flex;
+      align-items: center; }
+      .log .cont-log button .icono {
+        font-size: 17px;
+        margin-right: 10px; }
+      .log .cont-log button:hover {
+        color: #2c2c2c; }
+  
+  .dropdown {
+    border-bottom: solid 1px #2e2d30;
+    position: relative;
+    display: inline-block;
+    
+    
+    
+    width: 100%; }
+    .dropdown .dropdown-header {
+      
+      
+      
+     
+      
+      font-size: 15px;
+      border: none;
+      width: 100%;
+      cursor: pointer; }
+      .dropdown .dropdown-header .cont-task {
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+       
+        font-weight: 200;
+        justify-content: space-between;
+        height: 40px;
+        padding: 0px 15px; }
+        .dropdown .dropdown-header .cont-task .cont-titulo-icono {
+          display: flex;
+          align-items: center; }
+          .dropdown .dropdown-header .cont-task .cont-titulo-icono .icon {
+            
+            font-size: 15px; }
+          .dropdown .dropdown-header .cont-task .cont-titulo-icono h1 {
+            font-weight: 400;
+            
+            font-size: 15px;
+            
+            margin-left: 10px; }
+
+            .dropdown .dropdown-header .cont-task .puntos-opcion {
+              opacity: 0;
+              font-size: 14px;
+              width: 27px;  /* Ajusta este valor */
+              height: 27px;  /* Ajusta este valor */
+              
+              padding: 7px 5px;
+              border-radius: 5px;
+              &:hover{
+                background: #3d3d3d;
+                
+              }
+          }
+          
+          .dropdown .dropdown-header .cont-task:hover .puntos-opcion {
+              opacity: 1;
+          }
+    .dropdown .dropdown-list {
+      min-width: 160px;
+      z-index: 1; }
+      .dropdown .dropdown-list a {
+        color: #ccc;
+        font-size: 15px;
+        margin: 5px 0px;
+        margin-left: 30px;
+        font-weight: 500;
+        padding: 7px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: block; }
+        .dropdown .dropdown-list a:hover {
+          background-color: #2c2c2c; }
+  
+  a.active {
+    background: #2c2c2c;
+    border-radius: 5px;
+    width: 100%; }
+
+
+    /* aqui va el contenedor flotante  */
+
+    .cont-flotante-menu{
+      display: grid;
+      justify-content: center;
+      width: 250px;
+      position: absolute; 
+      z-index: 1000;
+      background: #24292e; /* Fondo oscuro al estilo GitHub */
+      border-radius: 7px;
+     
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+      left: 150px;
+  }
+  
+  .cont-flotante-menu .button-opcion{
+      display: inline-block;
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      margin: 5px 0px;
+      font-size: 14px;
+      color: #c9d1d9; /* Texto claro para contraste con el fondo oscuro */
+      &:hover{
+          background: #1f6feb; /* Fondo azul al pasar el ratón, al estilo GitHub */
+          color: #ffffff; /* Texto blanco al pasar el ratón, al estilo GitHub */
+      }
+  }
+  
+  .cont-flotante-menu button .ico{
+      font-size: 15px;
+      margin-right: 10px;
+      color: #c9d1d9; /* Ícono de color claro para un aspecto profesional */
+  }
+  
