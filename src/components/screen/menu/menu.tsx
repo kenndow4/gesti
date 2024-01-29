@@ -1,12 +1,13 @@
 
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../../../css/menu.css"
 
-import { FaHome,FaSignInAlt} from 'react-icons/fa';
+import { FaHome,FaSignOutAlt} from 'react-icons/fa';
 import { NavigateFunction, useNavigate} from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import MenuDesplegable from "./logica.menu";
+import { ThemeContext } from "../../../contextAll/theme";
 
 
 
@@ -17,8 +18,15 @@ const Menu = () => {
   const navigate:NavigateFunction = useNavigate();
    const [isOpen, setIsOpen] = useState(false);
   let authToken: string | null = localStorage.getItem("authToken");
+  const themeContext = useContext(ThemeContext);
 
+  if (!themeContext) {
+    throw new Error("Menu must be used within a ThemeProvider");
+  }
 
+  const { theme, toggleTheme } = themeContext;
+
+  console.log(theme);
 
  
     return ( 
@@ -52,11 +60,11 @@ const Menu = () => {
       {isOpen && (
         <div className="cont-log">
           <button onClick={() => navigate("/inicia de session")}>
-            <FaSignInAlt className="icono"/>
+            <FaSignOutAlt className="icono"/>
             Iniciar sesión
           </button>
           <button onClick={() => navigate("/registrate")}>
-          <FaSignInAlt className="icono"/>
+          <FaSignOutAlt className="icono"/>
             Registrarse
           </button>
         </div>

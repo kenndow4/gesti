@@ -1,5 +1,7 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { getEncabezado } from "./api/encabezado";
+import { ThemeContext, useTheme } from "./theme";
+
 
 
 export interface Casillas{
@@ -28,6 +30,7 @@ const ContextoContenedor = React.createContext<TituloContenedor>({
 const ContContenido = ({children}:{children:ReactNode}) => {
 
    const [dataContenedor, setDataContenedor]=useState<Contenedor[]>([]);
+   const { theme, toggleTheme } = useTheme();
    useEffect(() => {
     const fetchData = async () => {
         const result = await getEncabezado();
@@ -41,11 +44,12 @@ const ContContenido = ({children}:{children:ReactNode}) => {
 
     return ( 
 
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <ContextoContenedor.Provider value={{dataContenedor,setDataContenedor}}>
             {children}
 
         </ContextoContenedor.Provider>
-
+        </ThemeContext.Provider>
      );
 }
 

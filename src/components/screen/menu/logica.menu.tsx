@@ -27,13 +27,13 @@ const MenuDesplegable = () => {
         }
 
         if (title.toLowerCase().startsWith('p')) {
-            return 'lightgreen';
+            return 'green';
         } else if (title.toLowerCase().startsWith('c')) {
             return '#DB4437';
         } else if (title.toLowerCase().startsWith('u')) {
             return '#4285F4';
         } else {
-            return '#ccc'; // color por defecto
+            return null; // color por defecto
         }
     };
 
@@ -61,8 +61,8 @@ const MenuDesplegable = () => {
                         <div className="cont-task">
                             <div className="cont-titulo-icono">
                                 {openMenus[index] ? 
-                                    <FaFolderOpen style={{ fill: getColor(option) }} className="icon"/> : 
-                                    <FaFolder style={{ fill: getColor(option) }} className="icon"/>
+                                   <FaFolderOpen style={{ fill: getColor(option) || undefined }} className="icon"/> : 
+                                   <FaFolder style={{ fill: getColor(option) || undefined }} className="icon"/>
                                 }
                                 <h1>{typeof option === 'string' ? option : option.title}</h1>
                             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import "./css/principal.css";
 import './App.css';
@@ -8,10 +8,21 @@ import Error404 from './Error404';
 import ScreenPrincipal from './components/screen/screen.principal';
 import Menu from './components/screen/menu/menu';
 import Contenido from './components/screen/contenido';
+import { ThemeContext } from './contextAll/theme';
 
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
+  const themeContext = useContext(ThemeContext);
+
+  if (!themeContext) {
+    throw new Error("Menu must be used within a ThemeProvider");
+  }
+  const { theme } = themeContext;
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   const shouldShowMenu = () => {
     const isHome = location.pathname === '/' || location.pathname === '/inicio';
@@ -22,8 +33,8 @@ function App() {
   return (
     <>
       {shouldShowMenu() ? (
-        <div className="cont-all">
-          <div className="cont-menu"><Menu /></div>
+        <div className={`cont-all`}>
+          <div className={`cont-menu ${theme}`}><Menu /></div>
           <div className="cont-contenido">
             <Routes>
               <Route path="/" element={<ScreenPrincipal />} />
@@ -50,6 +61,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

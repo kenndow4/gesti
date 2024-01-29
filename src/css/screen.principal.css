@@ -5,19 +5,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 45px;
+    height: 50px;
     padding: 0px 30px;
 }
 
 .header-principal h1{
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 500;
 }
 .cont-search-noti-add{
     
     width: 45%;
-    height: 70%;
+    height: 65%;
     display: grid;
     grid-template-columns: 75% 20%;
     justify-content: space-between;
@@ -26,11 +26,11 @@
 .cont-search-principal{
     display: grid;
     grid-template-columns: 5% 95%;
-    border-radius: 5px;
+    border-radius: 3px;
     height: 100%;
     align-items: center;
-    border: solid 1px #454647;
-    background: #2c2d2e;
+    border: solid 1px var(--border-color);
+    background: var(--input-color);
     padding: 0px 20px;
 
 }
@@ -42,6 +42,7 @@
     background: none;
     outline: none;
     height: 100%;
+    color: var(--text-color);
    
    
 }
@@ -53,18 +54,21 @@
 }
 .cont-search-noti-add .cont-add-notificacion .ico{
     font-size: 20px;
+    
 }
 
 .header-principal button{
     border: none;
+    display: inline-block;
     font-size: 13px;
     font-weight: 600;
-    padding: 7px 10px;
-    border-radius: 4px;
+    padding: 8px 10px;
+    border-radius: 3px;
     color: #fff;
     background: #006AFF;
     cursor: pointer;
     margin-left: 10px;
+    height: 100%;
 }
 
 .caractula{

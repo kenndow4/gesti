@@ -1,4 +1,6 @@
-
+body{
+    background: var(--content-background-color);
+}
 
 .error404{
     
@@ -10,12 +12,14 @@
 .error404 h1{
     font-size: 50px;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-color);
+   
 
 }
 .error404 p{
     font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
-    color: #fff;
+    color: var(--text-color);
+   
 }

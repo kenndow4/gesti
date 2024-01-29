@@ -37,8 +37,10 @@ export const InputSeach: React.FC<InputProps> = ({ user }) => {
   return (
    
 <div className="search-results">
+
     {loading === "" ? (
       <>
+      <h1 className="titulo">Usuarios</h1>
         {data && data.length > 0 ? (
           data.slice(0, 5).map((usuario) => {
             const imageUrl = usuario.perfil.includes('http://') || usuario.perfil.includes('https://') 
@@ -50,7 +52,7 @@ export const InputSeach: React.FC<InputProps> = ({ user }) => {
                 <img src={imageUrl} alt={`Perfil de ${usuario.nombre}`} />
                 <div className="user-details">
                   <p className="user-name">{usuario.nombre}</p>
-                  <p className="user-email">{usuario.email}</p>
+                  
                 </div>
               </div>
             );

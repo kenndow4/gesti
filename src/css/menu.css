@@ -1,17 +1,15 @@
-*{
-  color: #ccc;
-}
+
 .gestix{
-  color: #fff;
+  
   font-size: 25px;
   padding: 10px 0px 20px 10px;
 }
 
 .cont-user {
   
-  background: #1f1e1f;
-  border-top: solid 1px #2e2d30;
-  border-right: solid 1px #2e2d30;
+  
+  border-top: solid 1px var(--border-color);
+  border-right: solid 1px var(--border-color);
   width: 15%;
   position: fixed;
  
@@ -22,16 +20,16 @@
     .cont-user img {
       width: 30px;
       width: 30px;
-      border: solid 1px #3d3d3d;
+      border: solid 1px var(--border-color);
       border-radius: 100%; }
     .cont-user .name-user {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
       margin-left: 5px;
       }
 
       .cont-opcion{
-        padding: 0px 5px;
+        padding:  0px;
       }
   
   .inicio {
@@ -40,14 +38,14 @@
      }
     .inicio a {
       text-decoration: none;
-      
+      color: var(--text-color);
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 500;
       display: inline-block;
       width: 100%;
-      padding: 10px 15px; 
+      padding: 10px 20px; 
       
-    border-bottom: solid 1px #2e2d30;
+    border-bottom: solid 1px var(--border-color);
     }
   
   .log button {
@@ -69,7 +67,7 @@
     position: absolute;
     z-index: 1; }
     .log .cont-log button {
-      color: #444444;
+      color: var(--text-color);
       display: block;
       cursor: pointer;
       margin: 10px 0;
@@ -77,12 +75,16 @@
       align-items: center; }
       .log .cont-log button .icono {
         font-size: 17px;
-        margin-right: 10px; }
+        margin-right: 10px;
+        
+        
+       }
       .log .cont-log button:hover {
         color: #2c2c2c; }
   
   .dropdown {
-    border-bottom: solid 1px #2e2d30;
+    /* border-bottom: solid 1px var(--border-color); */
+    
     position: relative;
     display: inline-block;
     
@@ -104,15 +106,18 @@
         
         display: flex;
         align-items: center;
-       
+      
         font-weight: 200;
         justify-content: space-between;
         height: 40px;
-        padding: 0px 15px; }
+        padding: 0px 20px; }
         .dropdown .dropdown-header .cont-task .cont-titulo-icono {
+          
           display: flex;
           align-items: center; }
           .dropdown .dropdown-header .cont-task .cont-titulo-icono .icon {
+            
+            fill: var(--icono-color);
             
             font-size: 15px; }
           .dropdown .dropdown-header .cont-task .cont-titulo-icono h1 {
@@ -120,7 +125,7 @@
             
             font-size: 15px;
             
-            margin-left: 10px; }
+            margin-left: 15px; }
 
             .dropdown .dropdown-header .cont-task .puntos-opcion {
               opacity: 0;
@@ -131,7 +136,7 @@
               padding: 7px 5px;
               border-radius: 5px;
               &:hover{
-                background: #3d3d3d;
+                background: var(--active-color);
                 
               }
           }
@@ -143,7 +148,8 @@
       min-width: 160px;
       z-index: 1; }
       .dropdown .dropdown-list a {
-        color: #ccc;
+        
+        color: var(--casilla-color);
         font-size: 15px;
         margin: 5px 0px;
         margin-left: 30px;
@@ -152,12 +158,13 @@
         border-radius: 4px;
         text-decoration: none;
         display: block; }
+        
         .dropdown .dropdown-list a:hover {
-          background-color: #2c2c2c; }
+          background-color: var(--active-color); }
   
   a.active {
-    background: #2c2c2c;
-    border-radius: 5px;
+    background: var(--active-color);
+    border: none;
     width: 100%; }
 
 
@@ -169,16 +176,17 @@
       width: 250px;
       position: absolute; 
       z-index: 1000;
-      background: #24292e; /* Fondo oscuro al estilo GitHub */
+      background: var(--content-background-color); /* Fondo oscuro al estilo GitHub */
       border-radius: 7px;
      
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       left: 150px;
   }
   
   .cont-flotante-menu .button-opcion{
       display: inline-block;
       width: 100%;
+      color: var(--text-color);
       background: none;
       border: none;
       display: flex;
@@ -187,16 +195,17 @@
       padding: 10px;
       margin: 5px 0px;
       font-size: 14px;
-      color: #c9d1d9; /* Texto claro para contraste con el fondo oscuro */
+   
       &:hover{
-          background: #1f6feb; /* Fondo azul al pasar el ratón, al estilo GitHub */
-          color: #ffffff; /* Texto blanco al pasar el ratón, al estilo GitHub */
+          
+          color: #006AFF; /* Texto blanco al pasar el ratón, al estilo GitHub */
+          
       }
   }
   
   .cont-flotante-menu button .ico{
       font-size: 15px;
       margin-right: 10px;
-      color: #c9d1d9; /* Ícono de color claro para un aspecto profesional */
+      color: var(--text-color); /* Ícono de color claro para un aspecto profesional */
   }
   
