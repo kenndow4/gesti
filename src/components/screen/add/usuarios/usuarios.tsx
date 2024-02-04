@@ -27,7 +27,7 @@ const Usuarios:React.FC<Userpara> = ({user, setMiembroSelecionado, miembroSeleci
     return (  
         <div className="cont-usuarios">
 
-           {user && user.map((usuario, i)=>{
+           {user && user.map((usuario)=>{
             const imageUrl = usuario.perfil.includes('http://') || usuario.perfil.includes('https://') 
                 ? usuario.perfil 
                 : `http://localhost:8080/perfil/${usuario.perfil}`;
