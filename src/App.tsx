@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import "./css/principal.css";
 import './App.css';
 import Login from './components/login/login';
@@ -12,7 +12,6 @@ import { ThemeContext } from './contextAll/theme';
 
 function App() {
   const location = useLocation();
-  const navigate = useNavigate();
   const themeContext = useContext(ThemeContext);
 
   if (!themeContext) {
@@ -61,7 +60,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
